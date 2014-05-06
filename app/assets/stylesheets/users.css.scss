@@ -1,0 +1,95 @@
+.settings_content {
+	position:relative;
+	width:940px;
+	margin:auto;
+
+.profile_table {
+  .row {
+   word-wrap:break-word;
+   width:940px;
+  } 
+}
+
+	h5 {
+	  margin-bottom:30px;
+    color:#999;
+	}
+
+  .account_title {
+    margin-bottom:30px;
+  }
+
+  .panel-heading {
+    background-color:#FFF; 
+  }
+    .input-group {
+	  margin-bottom:20px;
+	}
+
+	.input-group-addon{
+	   background-color:#FFF; 
+	}
+
+  .avatar {
+  position:relative;
+  float:left;
+  margin-right:20px;  
+  }
+  .avatar_new {
+  position:relative;
+  float:left;
+    h6 {
+      color:#999;
+    }
+  }
+
+}
+
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+  margin-top:20px;
+}
+
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}

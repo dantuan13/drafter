@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drafter</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= posts_path %>">Drafter</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Гаряче</a></li>
+        <li><a href="#">Свіже</a></li>
+        <li><a href="#">Найкраще</a></li>
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+         <form class="navbar-form navbar-left">
+            <a class="btn btn-primary" href="<%= new_post_path %>"> Додати </a>
+         </form>
+        <%if current_user %>
+	         <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.login %><b class="caret"></b></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="<%= user_profile_path current_user%>">Мій профайл</a></li>
+	            <li><a href="<%= account_path %>">Налаштування</a></li>
+	            <li class="divider"></li>
+	            <li><%= link_to "Вийти", :logout, method: :post %></li>
+	          </ul>
+	        </li>
+        <% else %>
+        <li><a href="<%= login_path %>">Увійти</a></li>
+        <li><a href="<%= new_user_path %>">Реєстрація</a></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>

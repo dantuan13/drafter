@@ -1,0 +1,70 @@
+<div class="settings_content">
+    <div class="row">
+        <div class="col-md-2 tabs-left">
+            <ul class="nav nav-tabs tabs-left">
+              <li class="active"><a href="<%= account_path%>">Аккаунт</a></li>
+              <li><a href="<%= password_path%>">Пароль</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <p><%= render 'flash' %></p>
+                <div class="col-md-9">
+                    <h1 class="account_title">Аккаунт</h1>
+                    <%= form_for @user, :url => update_names_path  do |f| %>
+                        <div class="field">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"> <%= f.label "Аватар" %> </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="avatar">
+                                        <%= image_tag("/users/" + current_user.id.to_s + "/" + @user.avatar, 
+                                        alt: "avatar") %>
+                                    </div>
+                                    <div class="avatar_new">
+                                        <div>
+                                            <%= f.file_field :avatar %>
+                                        </div>
+                                        <div>
+                                            <h6>Загружайте файли формату PNG/JPEG</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><%= f.label "Email" %></span>
+                                <%= f.text_field :email, class: "form-control" %>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><%= f.label "Логін" %></span>
+                                <%= f.text_field :login, class: "form-control" %>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"> <%= f.label "Стать" %> </h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-4">
+                                    <select class="form-control" id="user_gender" name="user[gender]">
+                                     <% if @user.gender == "1" %>
+                                        <option value="1" selected="selected">Чоловік</option>
+                                        <option value="2">Жінка</option>
+                                    <% else %>
+                                        <option value="1">Чоловік</option>
+                                        <option value="2" selected="selected">Жінка</option>
+                                    <% end %>
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <%= f.submit "Змінити", class: "btn btn-primary" %>
+                        </div>
+                    <% end %>             
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

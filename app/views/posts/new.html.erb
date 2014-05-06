@@ -1,0 +1,38 @@
+<div class="new_post_content">
+
+<h2>Створити новий пост</h2>
+<h5>Загружайте файли формату PNG/JPEG </h5>
+
+<%= form_for(@post) do |f| %>
+<div class="field">
+
+
+<div class="input-group">
+  <span class="input-group-addon"><%= f.label "Назва" %></span>
+  <%= f.text_field :title, class: "form-control" %>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= f.label "Опис" %> </h3>
+  </div>
+  <div class="panel-body">
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= f.label "Зображення" %> </h3>
+  </div>
+  <div class="panel-body">
+    <%= f.file_field :content %>
+  </div>
+</div>
+</div>
+  <div class="actions">
+    <%= f.submit "Створити", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+</div>

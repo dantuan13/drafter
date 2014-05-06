@@ -1,0 +1,61 @@
+.navbar-brand {
+  background-color:#d2322d;
+}
+
+.navbar-default .navbar-brand {
+color:#FFF;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+color:#FFF;
+background-color: #ac2925;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+color:#3276b1;
+background-color: #FFF;
+}
+.container-fluid {
+ 	width:940px;
+ }
+
+ .sign_form {
+	width:500px;
+	height:600px;
+	margin:auto;
+	h5 {
+	color:#999;
+	}
+	p {
+	margin:20px;
+	}
+
+}
+
+.to_top_button {
+	position:fixed;
+	margin-top:-72px;
+	width:42px;
+	min-width:42px;
+	height:100%;
+	background-color:transparent;
+	background-image:url("arrow.png");
+    background-repeat: no-repeat;
+}
+
+
+
+.transparent_button {
+	position:absolute;
+  	min-width:42px;
+	height:100%;
+	background-color:transparent;
+}
+
+.transparent_button:hover {
+	opacity:0.1;
+    filter:alpha(opacity=10);
+    -moz-opacity:0.1;
+    background-color:#3276b1;
+    cursor: pointer;
+}

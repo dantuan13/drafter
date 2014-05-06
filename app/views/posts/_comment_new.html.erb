@@ -1,0 +1,19 @@
+ <%= form_for add_comment, :url => comment_create_path do |f| %>
+    <div class="input-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"> <%= f.label "Додати комментар" %> </h3>
+          </div>
+          <div class="panel-body">
+                 <div class="field">
+        		    <%= f.text_area :content, class: "form-control" %>
+        		    <%= f.hidden_field :post_id, value: @post.id %>
+                    <%= f.hidden_field :answer, value: "1" %>
+                 </div>
+                 <div class="actions">
+                   <%= f.submit "Додати", class: "btn btn-primary" %>
+                </div>
+          </div>
+        </div>
+    </div>      
+<% end %>

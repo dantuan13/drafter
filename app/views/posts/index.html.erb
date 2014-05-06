@@ -1,0 +1,27 @@
+<div class="content_all">
+  <% @posts.each do |post| %>
+    <div class="row">
+        <div class="col-md-2">
+          <div class="rate">
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-default">Default</button>
+          </div>
+        </div>
+        <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-10">
+                  <h3><%= link_to post.title, post_path(post)%></h3>
+                  <div class="post_description">
+                    <h5><%= post.description%></h5>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10">
+                  <h4><%= image_tag("/users/" + post.user_id.to_s + "/" + post.content, :alt => "meme") %></h4>
+                </div>
+              </div>
+        </div>
+    </div>
+  <% end %>  
+</div>

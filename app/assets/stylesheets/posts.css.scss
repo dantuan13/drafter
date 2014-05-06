@@ -1,0 +1,65 @@
+.content_all {
+	width:940px;
+	margin:auto;
+	.row {
+	 word-wrap:break-word;
+	 width:620px;
+	}
+	a:hover {
+	  text-decoration:none;
+	}
+}
+
+.rate {
+	margin-top:20px;
+}
+
+.post_description {
+	h5 {
+	   margin-top:-9px;
+	}
+}
+
+.new_post_content {
+    position:relative;
+	width:600px;
+	height:600px;
+	margin:auto;
+	margin-top:40px;
+	h5 {
+	 color:#998;
+	 margin-bottom:30px;
+	}
+	.input-group {
+	  margin-bottom:20px;
+	}
+	.panel.panel-default {
+	   .panel-heading {
+	       background-color:#FFF;
+	    }
+	}
+
+	.input-group-addon{
+	   background-color:#FFF; 
+	}
+}
+
+.comment_new_panel {
+    margin-top:40px;
+	.input-group {
+	   width:603px;
+	   .panel-heading {
+	      background-color:#FFF;
+	   }
+	}
+	.form-control {
+	  margin-bottom:10px;
+	}
+} 
+
+.comment_all {
+	margin-top:30px;
+	.comment_row {
+	    margin-top:5px;
+	}
+}
